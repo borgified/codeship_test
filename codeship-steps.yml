@@ -1,4 +1,7 @@
-- name: example_parallel_step
+- name: ci
+  type: parallel
   steps:
     - service: test
       command: ./test.sh
+    - service: echo
+      command: echo "hello"
