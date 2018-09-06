@@ -1,7 +1,7 @@
 - name: ci
   type: parallel
   steps:
-    - service: test
+    - service: web
       command: ./test.sh
-    - service: echo
+    - service: redis
       command: echo "hello"
