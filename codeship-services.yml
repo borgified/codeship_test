@@ -1,0 +1,9 @@
+---
+  web: 
+    build: 
+      image: "web"
+      dockerfile: "Dockerfile"
+      ports: 
+        - "5000"
+  redis: 
+    image: "redis:alpine"

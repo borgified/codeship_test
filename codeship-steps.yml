@@ -1,0 +1,4 @@
+- name: example_parallel_step
+  steps:
+    - service: test
+      command: ./test.sh
