@@ -1,11 +1,10 @@
----
-  web: 
-    build: 
-      image: "web"
-      dockerfile: "Dockerfile"
-      ports: 
-        - "5000"
-    depends_on:
-      - redis
-  redis: 
-    image: "redis:alpine"
+redis: 
+  image: "healthcheck/redis:alpine"
+  ports:
+    - "6379"
+  volumes:
+    - ./tmp:/data
+redis-tester:
+  image: "healthcheck/redis:alpine"
+  depends_on:
+    - redis

@@ -1,7 +1,3 @@
-- name: ci
-  type: parallel
-  steps:
-    - service: web
-      command: ./test.sh
-    - service: redis
-      command: echo "hello"
+- name: increment key
+  service: redis-tester
+  command: redis-cli -h redis incr mykey
